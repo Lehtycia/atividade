@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+     
+        /* Body: (costumiza o corpo da página a fonte 
+       e a distancia da margem da página
+       
+       form: 
+       max-width: Limita a largura do formulário 
+       margin: auto Centraliza 
+       display: flex Usa Flexbox para organizar os elementos do formulário 
+       flex-direction: column  Organiza os elementos dentro do formulário em
+        coluna (verticalmente).
+       
+       label: aplica o mesmo estilo para rótulos (label), campos de entrada (input), 
+       caixas de seleção (select) e áreas de texto (textarea).
+
+       margin-bottom: Adiciona um espaço de pixels abaixo de cada um desses elementos, 
+       deixando o formulário mais organizado e fácil de ler.
+
+       */
+        body{ font-family: arial;margin: 50 px}
+        form { max-width: 300px; margin:auto ; display:flex; flex-direction: column; margin-top:60px}
+        form{background-color:rgb(182, 174, 255); }
+        label, input, select, textarea { margin-bottom: 10px; }
+        label {color: black;}
+        
+    </style>
+    
+    <title>Formulário de Inscrição</title>
+</head>
+<body>
+    <form>
+        <label>Formulário de inscrição</label>
+        <label>Nome <input type = "text"></label>
+        <label>E-mail <input type = "email"></label>
+        <label>telefone <input type = "tel"></label>
+        <label>Data de Nascimento <input type = "date"></label>
+
+        <h4>Genero</h4>
+        <label><input type="radio" name="genero"required>Feminino</label>
+        <label><input type="radio" name="genero"required>Masculino</label>
+       
+        <!--
+        O name="genero" agrupa os botões de rádio, garantindo que apenas 
+        um seja selecionado, e o required impede o envio do formulário sem uma escolha
+        
+        *botões de rádio apenas uma escolha
+        
+        *required: torna a opção obrigatória, o formulario não é enviado sem a seleção dessa opção
+        
+        *O <textarea> é um campo de texto grande que permite ao usuário digitar várias linhas, e 
+        o maxlength="200" limita a 200 caracteres o número máximo de entradas.-->
+
+       
+        <label>Tipo de Inscrição:
+            <select required>
+                <option value="">Selecione</option>
+                <option>Palestrante</option>
+                <option>Participante</option>
+                <option>Voluntário</option>
+            </select>
+        </label>
+
+        <label> Mensagem:<br> <textarea maxlength="200" required></textarea></label> 
+        
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+   </form>
+</body>
+</html>
